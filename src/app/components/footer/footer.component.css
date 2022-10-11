@@ -1,0 +1,23 @@
+p {
+    color: #01292d;
+    margin-top: 30px;
+
+    text-align: center;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 100%;
+}
+p a {
+    color: #01292d;
+    
+    text-decoration: none;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 100%;
+
+    margin-left: 5px;
+}
+p a:hover {
+    font-weight: 600;
+}
