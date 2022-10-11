@@ -8,6 +8,7 @@ import { MenuComponent } from './components/menu/menu.component';
 import { ReceitacompletaComponent } from './pages/receitacompleta/receitacompleta.component';
 import { ReceitaComponent } from './components/receita/receita.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { HttpClientModule } from '@angular/common/http'
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { FooterComponent } from './components/footer/footer.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

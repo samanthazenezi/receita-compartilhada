@@ -1,20 +1,11 @@
-<div class="receita">
-    <div class="conteudo-receita">
-        <h1>Brownie</h1>
-        <p><i>Rosangela dos Santos Zenezi</i></p>
-        <p>Sobremesa</p>
-        <a [routerLink]='["/receita"]'>Ver receita</a>
-    </div>
-    <div class="conteudo-receita">
-        <h1>Grãomelete</h1>
-        <p><i>Rosangela dos Santos Zenezi</i></p>
-        <p>Alimentação saudável</p>
-        <a [routerLink]='["/receita"]'>Ver receita</a>
-    </div>
-    <div class="conteudo-receita">
-        <h1>Bolo de maçã</h1>
-        <p><i>Rosangela dos Santos Zenezi</i></p>
-        <p>Bolo</p>
-        <a [routerLink]='["/receita"]'>Ver receita</a>
+<div *ngFor="let receita of receitas">
+    <div class="receita">
+        <div class="conteudo-receita">
+            <h1>{{receita.name}}</h1>
+            <p><i>{{receita.user}}</i></p>
+            <p>{{receita.category}}</p>
+            <a [routerLink]='["/receita"]'>Ver receita</a>
+        </div>
     </div>
 </div>
+
