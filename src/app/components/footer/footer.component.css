@@ -1,3 +1,8 @@
+div {
+    position: absolute;
+    left: 70px;
+    top: 1000px;
+}
 p {
     color: #01292d;
     margin-top: 30px;

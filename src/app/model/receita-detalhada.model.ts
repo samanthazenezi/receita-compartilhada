@@ -1,5 +1,5 @@
 export class ReceitaDetalhada {
-    titulo : string
-    ingredientes : string[] 
-    preparo : string
+    name : string
+    ingredients : string[] 
+    preparationMode : string
 }
