@@ -8,7 +8,22 @@
 .menu img {
     width: 70px;
 }
-.menu a {
+.menu a:first-child {
+    margin-right: 20px;
+
+    color: #01292d;
+
+    text-align: center;
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 100%;
+
+    cursor: pointer;
+
+    transition: 400ms;
+}
+.menu a:last-child {
     background-color: #006d77;
     color: #edf6f9;
 
@@ -27,18 +42,21 @@
 
     transition: 400ms;
 }
-.menu a:hover {
+.menu a:first-child:hover {
+    text-decoration: underline;
+}
+.menu a:last-child:hover {
     background-color: #0081a7;
     filter: brightness(1.1);
 }
 
-@media screen and (min-width: 1440px) {
+@media (min-width: 1440px) {
     .menu img {
         width: 90px;
     }
 }
 
-@media screen and (min-width: 100vw) {
+@media (min-width: 100vw) {
     .menu img {
         width: 95px;
     }

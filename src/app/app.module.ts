@@ -8,7 +8,8 @@ import { MenuComponent } from './components/menu/menu.component';
 import { ReceitacompletaComponent } from './pages/receitacompleta/receitacompleta.component';
 import { ReceitaComponent } from './components/receita/receita.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { HttpClientModule } from '@angular/common/http'
+import { HttpClientModule } from '@angular/common/http';
+import { NovareceitaComponent } from './pages/novareceita/novareceita.component'
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { HttpClientModule } from '@angular/common/http'
     ReceitacompletaComponent,
     ReceitaComponent,
     FooterComponent,
+    NovareceitaComponent,
   ],
   imports: [
     BrowserModule,
