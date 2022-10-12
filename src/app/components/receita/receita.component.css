@@ -60,6 +60,70 @@
     filter: brightness(1.1);
 }
 
+@media (min-width: 480px) {
+    .receita {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+    
+        margin-top: 50px;
+    }
+    .conteudo-receita {
+        border: 2px solid #006d77;
+        border-radius: 10px;
+    
+        width: 280px;
+    
+        padding: 15px;
+    
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+    .conteudo-receita h1 {
+        color: #01292d;
+    
+        font-size: 25px;
+        font-weight: 400;
+        line-height: 100%;
+    }
+    .conteudo-receita p {
+        color: #01292d;
+    
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 100%;
+    }
+    .conteudo-receita a {
+        background-color: #006d77;
+        color: #edf6f9;
+    
+        border: none;
+        border-radius: 20px;
+    
+        text-decoration: none;
+        text-align: center;
+        font-size: 18px;
+        line-height: 100%;
+    
+        padding: 8px 10px;
+    
+        width: 120px;
+    
+        margin: auto;
+    
+        cursor: pointer;
+    
+        transition: 400ms;
+    }
+    .conteudo-receita a:hover {
+        background-color: #0081a7;
+        filter: brightness(1.1);
+    }
+}
+
 @media (min-width: 1440px) {
     .geral {
         display: grid;

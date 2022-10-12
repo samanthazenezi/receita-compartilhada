@@ -12,4 +12,12 @@ export class NovareceitaComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  adicionarIngrediente (){
+    let ingrediente = document.getElementById("input");
+    let listaIngredientes = document.getElementById("ingredientes").innerHTML;
+
+    listaIngredientes += "<li>" +ingrediente+ "<li>"
+
+    document.getElementById("input").innerHTML = listaIngredientes
+}
 }
