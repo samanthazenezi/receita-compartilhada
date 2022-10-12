@@ -31,3 +31,15 @@
     background-color: #0081a7;
     filter: brightness(1.1);
 }
+
+@media screen and (min-width: 1440px) {
+    .menu img {
+        width: 90px;
+    }
+}
+
+@media screen and (min-width: 100vw) {
+    .menu img {
+        width: 95px;
+    }
+}

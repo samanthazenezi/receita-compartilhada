@@ -1,11 +1,14 @@
-<div *ngFor="let receita of receitas">
-    <div class="receita">
-        <div class="conteudo-receita">
-            <h1>{{receita.name}}</h1>
-            <p><i>{{receita.user}}</i></p>
-            <p>{{receita.category}}</p>
-            <a [routerLink]='["/receita", receita.id]'>Ver receita</a>
+<div class="geral">
+    <div *ngFor="let receita of receitas">
+        <div class="receita">
+            <div class="conteudo-receita">
+                <h1>{{receita.name}}</h1>
+                <p><i>{{receita.user}}</i></p>
+                <p>{{receita.category}}</p>
+                <a [routerLink]='["/receita", receita.id]'>Ver receita</a>
+            </div>
         </div>
     </div>
 </div>
+
 

@@ -1,5 +1,7 @@
+import { Ingredientes } from './ingredientes.model';
+
 export class ReceitaDetalhada {
     name : string
-    ingredients : string[] 
+    ingredients : Ingredientes[] 
     preparationMode : string
 }

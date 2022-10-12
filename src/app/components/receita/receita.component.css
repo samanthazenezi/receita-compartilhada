@@ -60,3 +60,43 @@
     filter: brightness(1.1);
 }
 
+@media screen and (min-width: 1440px) {
+    .geral {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        justify-self: center;
+        align-self: center;
+
+        margin: 10px auto;
+    }
+    .conteudo-receita h1 {
+        font-size: 30px;
+    }
+    .conteudo-receita p {
+        font-size: 20px;
+    }
+}
+
+@media screen and (min-width: 100vw) {
+    .geral {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        justify-self: center;
+        align-self: center;
+
+        margin: 10px auto;
+    }
+    .conteudo-receita {
+        width: 380px;
+    }
+    .conteudo-receita h1 {
+        font-size: 45px;
+    }
+    .conteudo-receita p {
+        font-size: 25px;
+    }
+    .conteudo-receita a {
+        font-size: 22px;
+        width: 150px;
+    }
+}

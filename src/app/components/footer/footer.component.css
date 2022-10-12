@@ -26,3 +26,18 @@ p a {
 p a:hover {
     font-weight: 600;
 }
+
+@media screen and (min-width: 1440px) {
+    div {
+        position: absolute;
+        left: 622px;
+        top: 765px;
+    }
+}
+@media screen and (min-width: 100vw) {
+    div {
+        position: absolute;
+        left: 900px;
+        top: 870px;
+    }
+}
