@@ -27,13 +27,16 @@
 }
 .incluir {
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
 }
-.incluir button {
+.conteudo-form button {
     background-color: #edf6f9;
 
     border: 2px solid #01292d;
-    border-top-right-radius: 8px;
-    border-bottom-right-radius: 8px;
+    border-radius: 8px;
 
     padding: 5px;
 
@@ -47,18 +50,31 @@
 
     transition: 400ms;
 }
-.incluir button:hover {
+.conteudo-form button:hover {
     font-weight: 600;
 }
-.incluir input {
+.conteudo-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+.conteudo-form label {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 100%;
+
+    color: #01292d;
+}
+.conteudo-form input {
     outline: none;
 
     width: 220px;
     height: 40px;
 
     border: 2px solid #01292d;
-    border-top-left-radius: 8px;
-    border-bottom-left-radius: 8px;
+    border-radius: 8px;
 
     color: #01292d;
 
@@ -74,6 +90,8 @@
     background-color: #edf6f9;
     width: 280px;
     height: auto;
+
+    margin-block: 30px;
 }
 .preparo textarea {
     outline: none;

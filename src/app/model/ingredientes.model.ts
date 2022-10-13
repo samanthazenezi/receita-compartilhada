@@ -1,5 +1,5 @@
 export class Ingredientes {
     name: string
-    amount: number
+    amount: string
     unit: string
 }

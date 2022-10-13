@@ -1,4 +1,11 @@
+import { Ingredientes } from './../../model/ingredientes.model';
+import { ReceitaDetalhada } from './../../model/receita-detalhada.model';
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms'
+import { Router } from '@angular/router';
+
+
 
 @Component({
   selector: 'app-novareceita',
@@ -7,17 +14,47 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NovareceitaComponent implements OnInit {
 
-  constructor() { }
+  listaIngredientes: Ingredientes[] = [];
+
+  formIngredientes = new FormGroup({
+    nome: new FormControl('', Validators.required),
+    quantidade: new FormControl('', Validators.required),
+    medida: new FormControl('', Validators.required),
+    preparo: new FormControl('', Validators.required),
+    nomeReceita: new FormControl('', Validators.required),
+    nomeUser: new FormControl('', Validators.required),
+    categoria: new FormControl('', Validators.required)
+  });
+
+  constructor(private http: HttpClient, private route: Router) { }
 
   ngOnInit(): void {
   }
 
-  adicionarIngrediente (){
-    let ingrediente = document.getElementById("input");
-    let listaIngredientes = document.getElementById("ingredientes").innerHTML;
+  adicionarIngredientes() {
+    let ingred = new Ingredientes();
+    ingred.name = this.formIngredientes.controls.nome.value;
+    ingred.amount = this.formIngredientes.controls.quantidade.value;
+    ingred.unit = this.formIngredientes.controls.medida.value;
 
-    listaIngredientes += "<li>" +ingrediente+ "<li>"
+    this.listaIngredientes.push(ingred);
+    this.formIngredientes.reset();
+  }
 
-    document.getElementById("input").innerHTML = listaIngredientes
-}
+  salvar(){
+    let modoPreparo = this.formIngredientes.controls.preparo.value;
+    let url = "https://recipes-api-production-2d9d.up.railway.app/api/recipes";
+    let body = new ReceitaDetalhada();
+
+    body.name = this.formIngredientes.controls.nomeReceita.value;
+    body.preparationMode = this.formIngredientes.controls.preparo.value;
+    body.category = this.formIngredientes.controls.categoria.value;
+    body.user = this.formIngredientes.controls.nomeUser.value;
+    body.ingredients = this.listaIngredientes
+
+    this.http.post(url, body).subscribe( x => this.route.navigateByUrl("")) 
+
+
+
+  }
 }
