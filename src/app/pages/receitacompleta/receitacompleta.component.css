@@ -104,3 +104,22 @@
         width: 350px;
     }
 }
+@media (max-width: 480px) {
+    .receita h1 {
+        font-size: 4rem;
+    }
+    .ingredientes h2, .preparo h2 {
+        margin: 3rem 3rem;
+
+        font-size: 2.5rem;
+    }
+    .list, .preparo p {
+        margin: 3rem 3rem;
+    }
+    .list p, .preparo p {
+        font-size: 2rem;
+    }
+    .preparo p {
+        width: 350px;
+    }
+}

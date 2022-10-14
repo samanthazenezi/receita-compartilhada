@@ -42,3 +42,8 @@ p a:hover {
         bottom: auto;
     }
 }
+@media (max-width: 480px) {
+    div {
+        bottom: auto;
+    }
+}

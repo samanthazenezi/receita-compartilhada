@@ -113,3 +113,20 @@
         margin-right: 0;
     }
 }
+@media (max-width: 480px) {
+    .menu-container {
+        padding: 1rem;
+    }
+    .menu-container img {
+        width: 60px;
+    }
+    .botoes {
+        gap: 1rem;
+    }
+    .botoes a:first-child, .botoes a:last-child{
+        font-size: 1.6rem;
+    }
+    .botoes a:last-child {
+        margin-right: 0;
+    }
+}
