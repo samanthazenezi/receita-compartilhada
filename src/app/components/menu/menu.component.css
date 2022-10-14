@@ -73,6 +73,9 @@
     .botoes a:first-child, .botoes a:last-child {
         font-size: 1.6rem;
     }
+    .botoes a:last-child {
+        margin-right: 0;
+    }
 }
 @media (max-width: 375px) {
     .menu-container {
@@ -89,6 +92,9 @@
     .botoes a:first-child, .botoes a:last-child{
         font-size: 1.6rem;
     }
+    .botoes a:last-child {
+        margin-right: 0;
+    }
 }
 @media (max-width: 425px) {
     .menu-container {
@@ -99,10 +105,11 @@
     }
     .botoes {
         gap: 1rem;
-
-        margin-right: 5rem;
     }
     .botoes a:first-child, .botoes a:last-child{
         font-size: 1.6rem;
+    }
+    .botoes a:last-child {
+        margin-right: 0;
     }
 }

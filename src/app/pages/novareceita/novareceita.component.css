@@ -126,16 +126,25 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        gap: 2rem; 
+        gap: 2rem;
+        
+        margin: 0;
     }
     .novareceita h1 {
         font-size: 3.5rem;
     }
     .conteudo-ingredientes h2, .preparo h2 {
         font-size: 2.5rem;
+        margin: 2rem 0;
     }
     .preparo textarea {
         width: 28rem;
+    }
+    .lista p {
+        margin: 1rem 0;
+    }
+    .botao {
+        margin-block: 1rem;
     }
    
 }
@@ -147,16 +156,26 @@
         justify-content: center;
         align-items: center;
         gap: 2rem; 
+
+        margin: 0;
     }
     .novareceita h1 {
         font-size: 3.5rem;
     }
     .conteudo-ingredientes h2, .preparo h2 {
         font-size: 2.5rem;
+        margin: 2rem 0;
     }
     .preparo textarea {
         width: 28rem;
     }
+    .lista p {
+        margin: 1rem 0;
+    }
+    .botao {
+        margin-block: 1rem;
+    }
+   
 }
 @media (max-width: 425px) {
     .novareceita, .ingredientes, .form, .conteudo-ingredientes, 
@@ -166,14 +185,24 @@
         justify-content: center;
         align-items: center;
         gap: 2rem; 
+
+        margin: 0;
     }
     .novareceita h1 {
         font-size: 3.5rem;
     }
     .conteudo-ingredientes h2, .preparo h2 {
         font-size: 2.5rem;
+        margin: 2rem 0;
     }
     .preparo textarea {
         width: 28rem;
     }
+    .lista p {
+        margin: 1rem 0;
+    }
+    .botao {
+        margin-block: 1rem;
+    }
+   
 }
