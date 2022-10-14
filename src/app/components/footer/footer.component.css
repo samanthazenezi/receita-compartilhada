@@ -1,23 +1,22 @@
 div {
+    bottom: 0;
     position: absolute;
-    left: 70px;
-    top: 1000px;
+    width: 100%;
+    text-align: center;
+    padding: 1rem;
 }
 p {
-    color: #01292d;
-    margin-top: 30px;
+    color: #000000;
 
-    text-align: center;
-    font-size: 16px;
+    font-size: 2rem;
     font-weight: 400;
     line-height: 100%;
 }
 p a {
-    color: #01292d;
+    color: #000000;
     
     text-decoration: none;
-    text-align: center;
-    font-size: 16px;
+    font-size: 2rem;
     font-weight: 400;
     line-height: 100%;
 
@@ -26,48 +25,20 @@ p a {
 p a:hover {
     font-weight: 600;
 }
-@media (min-width: 480px) {
-    div {
-        position: absolute;
-        left: 70px;
-        top: 1000px;
-    }
-    p {
-        color: #01292d;
-        margin-top: 30px;
-    
-        text-align: center;
-        font-size: 16px;
-        font-weight: 400;
-        line-height: 100%;
-    }
-    p a {
-        color: #01292d;
-        
-        text-decoration: none;
-        text-align: center;
-        font-size: 16px;
-        font-weight: 400;
-        line-height: 100%;
-    
-        margin-left: 5px;
-    }
-    p a:hover {
-        font-weight: 600;
-    }
-}
 
-@media (min-width: 1440px) {
+
+@media (max-width: 320px) {
     div {
-        position: absolute;
-        left: 622px;
-        top: 765px;
+        bottom: auto;
     }
 }
-@media (min-width: 100vw) {
+@media (max-width: 375px) {
     div {
-        position: absolute;
-        left: 900px;
-        top: 870px;
+        bottom: auto;
+    }
+}
+@media (max-width: 425px) {
+    div {
+        bottom: auto;
     }
 }

@@ -1,140 +1,179 @@
-.novareceita {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
 .novareceita h1 {
-    color: #01292d;
+    color: #000000;
 
     text-align: center;
-    text-transform: uppercase;
-    font-size: 35px;
-    font-weight: 400;
-    line-height: 100%;
-
-    margin-block: 30px;
-}
-.ingredientes h2, .preparo h2 {
-    color: #01292d;
-
-    text-align: center;
-    font-size: 24px;
+    font-size: 5rem;
     font-weight: 600;
     line-height: 100%;
-    
-    margin-block: 30px;
+
+    margin-block: 5rem;
 }
-.incluir {
+.conteudo-ingredientes h2 {
+    color: #000000;
+
+    font-size: 3rem;
+    font-weight: 600;
+    line-height: 100%;
+
+    margin: 3rem 10rem;
+}
+.conteudo-ingredientes {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
 }
-.conteudo-form button {
-    background-color: #edf6f9;
+.conteudo-form, .descricao {
+    margin: 3rem 10rem;
 
-    border: 2px solid #01292d;
-    border-radius: 8px;
+    display: flex;
+    gap: 3rem;
+}
+.conteudo-form button, .botao button {
+    background-color: #000000;
+    color: #fff;
 
-    padding: 5px;
-
-    font-size: 16px;
+    font-size: 2rem;
     font-weight: 400;
     line-height: 100%;
 
-    color: #01292d;
+    width: 14rem;
+    height: 4rem;
+
+    border-radius: 0.4rem;
 
     cursor: pointer;
 
     transition: 400ms;
 }
-.conteudo-form button:hover {
-    font-weight: 600;
+.conteudo-form button:hover, .botao button:hover {
+    background-color: #fff;
+    color: #000000;
+    border: 2px solid #000000;
 }
-.conteudo-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 5px;
-}
-.conteudo-form label {
-    font-size: 16px;
+.conteudo label {
+    color: #000000;
+
+    font-size: 2rem;
     font-weight: 400;
     line-height: 100%;
 
-    color: #01292d;
+    margin-right: 0.5rem;
 }
-.conteudo-form input {
+.conteudo input {
     outline: none;
 
-    width: 220px;
-    height: 40px;
+    color: #000000;
 
-    border: 2px solid #01292d;
-    border-radius: 8px;
-
-    color: #01292d;
-
-    font-size: 20px;
+    font-size: 2rem;
     font-weight: 400;
     line-height: 100%;
 
-    padding: 8px;
+    border: 1px solid #000000;
+    border-radius: 0.4rem;
 
-    background-color: #edf6f9;
+    padding: 0.5rem;
+
+    width: 20rem;
+    height: 4rem;
 }
-.tdsingredientes {
-    background-color: #edf6f9;
-    width: 280px;
-    height: auto;
+.lista p {
+    color: #000000;
 
-    margin-block: 30px;
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 100%;
+
+    margin: 1rem 10rem;
+}
+.preparo {
+    margin: 7rem 10rem;
+}
+.preparo h2 {
+    color: #000000;
+
+    font-size: 3rem;
+    font-weight: 600;
+    line-height: 100%;
+
+    margin-bottom: 2rem;
 }
 .preparo textarea {
     outline: none;
 
-    width: 280px;
-    height: 200px;
+    color: #000000;
 
-    border: 2px solid #01292d;
-    border-radius: 8px;
-
-    color: #01292d;
-
-    font-size: 20px;
+    font-size: 2rem;
     font-weight: 400;
     line-height: 100%;
 
-    padding: 8px;
+    border: 1px solid #000000;
+    border-radius: 0.4rem;
 
-    background-color: #edf6f9;
+    padding: 0.5rem;
+
+    width: 60rem;
+    height: 20rem;
 }
 .botao {
-    margin-block: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.botao button {
-    background-color: #006d77;
-    color: #edf6f9;
 
-    border: none;
-    border-radius: 20px;
-
-    text-align: center;
-    font-size: 18px;
-    line-height: 100%;
-
-    padding: 8px 10px;
-
-    width: 120px;
-
-    cursor: pointer;
-
-    transition: 400ms;
+@media (max-width: 320px) {
+    .novareceita, .ingredientes, .form, .conteudo-ingredientes, 
+    .conteudo-form, .descricao, .preparo, .conteudo {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem; 
+    }
+    .novareceita h1 {
+        font-size: 3.5rem;
+    }
+    .conteudo-ingredientes h2, .preparo h2 {
+        font-size: 2.5rem;
+    }
+    .preparo textarea {
+        width: 28rem;
+    }
+   
 }
-.botao button:hover {
-    background-color: #0081a7;
-    filter: brightness(1.1);
+@media (max-width: 375px) {
+    .novareceita, .ingredientes, .form, .conteudo-ingredientes, 
+    .conteudo-form, .descricao, .preparo, .conteudo {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem; 
+    }
+    .novareceita h1 {
+        font-size: 3.5rem;
+    }
+    .conteudo-ingredientes h2, .preparo h2 {
+        font-size: 2.5rem;
+    }
+    .preparo textarea {
+        width: 28rem;
+    }
+}
+@media (max-width: 425px) {
+    .novareceita, .ingredientes, .form, .conteudo-ingredientes, 
+    .conteudo-form, .descricao, .preparo, .conteudo {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem; 
+    }
+    .novareceita h1 {
+        font-size: 3.5rem;
+    }
+    .conteudo-ingredientes h2, .preparo h2 {
+        font-size: 2.5rem;
+    }
+    .preparo textarea {
+        width: 28rem;
+    }
 }

@@ -20,7 +20,6 @@ export class ReceitaComponent implements OnInit {
       response.forEach( x => {
         this.receitas.push(x)
       })
-      console.log(response)
     }, error => {
       alert("Calma bb!")
     } )

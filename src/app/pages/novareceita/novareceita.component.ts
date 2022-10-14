@@ -52,7 +52,11 @@ export class NovareceitaComponent implements OnInit {
     body.user = this.formIngredientes.controls.nomeUser.value;
     body.ingredients = this.listaIngredientes
 
-    this.http.post(url, body).subscribe( x => this.route.navigateByUrl("")) 
+    this.http.post(url, body).subscribe( x => this.route.navigateByUrl(""),
+    error => {
+      alert("Calma bb!")
+    } 
+    ) 
 
 
 
