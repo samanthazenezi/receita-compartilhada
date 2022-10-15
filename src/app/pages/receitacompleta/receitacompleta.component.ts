@@ -15,6 +15,7 @@ export class ReceitacompletaComponent implements OnInit {
 
   constructor(private http: HttpClient, private route: ActivatedRoute) {}
 
+
   ngOnInit(): void {
     const id = this.route.snapshot.paramMap.get('id'); 
     let url = "https://recipes-api-production-2d9d.up.railway.app/api/recipes/" + id;
@@ -26,4 +27,7 @@ export class ReceitacompletaComponent implements OnInit {
     } )
   }
 
+  openClose() {
+    document.getElementById('modal').classList.toggle('visivel')
+  }
 }
