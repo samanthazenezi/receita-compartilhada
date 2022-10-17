@@ -1,6 +1,5 @@
-import { ReceitaDetalhada } from 'src/app/model/receita-detalhada.model';
+import { ApiService } from './../../Services/api.service';
 import { Receita } from './../../model/receita.model';
-import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -12,12 +11,11 @@ export class ReceitaComponent implements OnInit {
 
   receitas : Receita[] = []
 
-  constructor(private http: HttpClient) { }
-  url = "https://recipes-api-production-2d9d.up.railway.app/api/recipes/"
+  constructor( private api: ApiService) { }
 
   ngOnInit(): void {
 
-    this.http.get<Receita[]>(this.url).subscribe( response => {
+    this.api.get<Receita[]>("recipes").subscribe( response => {
       response.forEach( x => {
         this.receitas.push(x)
       })
@@ -27,13 +25,9 @@ export class ReceitaComponent implements OnInit {
   }
 
   delete(id: string) {
-    this.http.delete(this.url + id).subscribe( sucess => {
-      alert("Receita deletada!")
-
+    this.api.delete("recipes/" + id).subscribe( sucess => {
       window.location.reload()
     })
-  } 
-  
-
+  }
 
 }

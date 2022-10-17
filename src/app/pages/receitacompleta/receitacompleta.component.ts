@@ -1,5 +1,4 @@
-import { Ingredientes } from './../../model/ingredientes.model';
-import { HttpClient } from '@angular/common/http';
+import { ApiService } from './../../Services/api.service';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ReceitaDetalhada } from 'src/app/model/receita-detalhada.model';
@@ -13,14 +12,13 @@ export class ReceitacompletaComponent implements OnInit {
 
   detalhe : ReceitaDetalhada
 
-  constructor(private http: HttpClient, private route: ActivatedRoute) {}
+  constructor(private api: ApiService, private route: ActivatedRoute) {}
 
 
   ngOnInit(): void {
     const id = this.route.snapshot.paramMap.get('id'); 
-    let url = "https://recipes-api-production-2d9d.up.railway.app/api/recipes/" + id;
 
-    this.http.get<ReceitaDetalhada>(url).subscribe( response => {
+    this.api.get<ReceitaDetalhada>("recipes/" + id).subscribe( response => {
       this.detalhe = response;
     }, error => {
       alert("Error")

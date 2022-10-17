@@ -1,6 +1,6 @@
+import { ApiService } from './../../Services/api.service';
 import { Ingredientes } from './../../model/ingredientes.model';
 import { ReceitaDetalhada } from './../../model/receita-detalhada.model';
-import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms'
 import { Router } from '@angular/router';
@@ -26,7 +26,7 @@ export class NovareceitaComponent implements OnInit {
     categoria: new FormControl('', Validators.required)
   });
 
-  constructor(private http: HttpClient, private route: Router) { }
+  constructor(private api: ApiService, private route: Router) { }
 
   ngOnInit(): void {
   }
@@ -43,7 +43,6 @@ export class NovareceitaComponent implements OnInit {
 
   salvar(){
     let modoPreparo = this.formIngredientes.controls.preparo.value;
-    let url = "https://recipes-api-production-2d9d.up.railway.app/api/recipes";
     let body = new ReceitaDetalhada();
 
     body.name = this.formIngredientes.controls.nomeReceita.value;
@@ -52,13 +51,10 @@ export class NovareceitaComponent implements OnInit {
     body.user = this.formIngredientes.controls.nomeUser.value;
     body.ingredients = this.listaIngredientes
 
-    this.http.post(url, body).subscribe( x => this.route.navigateByUrl(""),
+    this.api.post("recipes", body).subscribe( x => this.route.navigateByUrl(""),
     error => {
       alert("Calma bb!")
     } 
     ) 
-
-
-
   }
 }

@@ -11,6 +11,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HttpClientModule } from '@angular/common/http';
 import { NovareceitaComponent } from './pages/novareceita/novareceita.component'
 import { ReactiveFormsModule } from '@angular/forms';
+import { LoginComponent } from './pages/login/login.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     ReceitaComponent,
     FooterComponent,
     NovareceitaComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
