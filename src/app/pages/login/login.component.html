@@ -1,11 +1,20 @@
-<form [formGroup]="formLogin" (ngSubmit)="salvar()">
+<div class="login">
+    <img src="assets/logo.png" alt="imagem-logo">
 
-    <label for="login">Login:</label>
-    <input type="text" formControlName="userName">
+    <form [formGroup]="formLogin" (ngSubmit)="salvar()">
+
+        <div class="conteudo-form">
+            <label for="login">Login:</label>
+            <input type="text" formControlName="userName">
+        </div>
+        
+        <div class="conteudo-form">
+            <label for="senha">Senha:</label>
+            <input type="password" formControlName="password">
+        </div>
     
+        <button type="submit">Login</button>
+    </form>
+</div>
 
-    <label for="senha">Senha:</label>
-    <input type="password" formControlName="password">
 
-    <button type="submit">OK</button>
-</form>
