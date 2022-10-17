@@ -71,131 +71,6 @@
     width: 800px;
 }
 
-/* MODAL */
-
-.visivel {
-    opacity: 0;
-    visibility: hidden;
-} 
-.conteudo-modal {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-
-    background-color: #0081a7;
-    width: 60rem;
-    height: 85rem;
-
-    border-radius: 8px;
-
-    margin: auto;
-}
-.form {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-.form h1 {
-    color: #fff;
-
-    text-align: center;
-    text-transform: uppercase;
-    font-size: 4rem;
-    font-weight: 600;
-    line-height: 100%;
-
-    margin-block: 3rem;
-}
-.conteudo-ingredientes h2, .descricao h2, .mood-preparo h2 {
-    color: #fff;
-
-    text-align: center;
-    font-size: 2.5rem;
-    font-weight: 400;
-    line-height: 100%;
-
-    margin-block: 2rem;
-}
-.conteudo {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-
-    margin-block: 1rem;
-}
-.conteudo label {
-    color: #fff;
-
-    text-align: center;
-    font-size: 2rem;
-    font-weight: 400;
-    line-height: 100%;
-}
-.conteudo input {
-    width: 30rem;
-    height: 4rem;
-
-    outline: none;
-
-    border: none;
-    border-radius: 8px;
-
-    color: #000000;
-
-    font-size: 2rem;
-    font-weight: 400;
-    line-height: 100%;
-
-    padding: 5px;
-}
-.mood-preparo textarea {
-    width: 50rem;
-    height: 10rem;
-
-    outline: none;
-
-    border: none;
-    border-radius: 8px;
-
-    color: #000000;
-
-    font-size: 2rem;
-    font-weight: 400;
-    line-height: 100%;
-
-    padding: 5px;
-}
-.botao {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.botao button{
-    background-color: #fff;
-    color: #0081a7;
-    
-    border: none;
-    border-radius: 2rem;
-    
-    padding: 0.8rem 2rem;
-
-    text-decoration: none;
-    font-size: 2rem;
-    font-weight: 400;
-    line-height: 100%;
-    
-    margin: 5rem 9rem;
-
-    cursor: pointer;
-    
-    transition: 400ms;
-}
-
 /* RESPONSIVIDADE */
 
 @media (max-width: 320px) {
@@ -219,37 +94,6 @@
     .receita button {
         margin: 3rem 3rem;
     }
-    .conteudo-modal {
-
-        border-radius: 0;
-
-        margin: 0;
-    }
-    .form h1 {
-        font-size: 3rem;
-    }
-    .conteudo {
-        flex-direction: column;
-    }
-    .conteudo label {
-        font-size: 1.5rem;
-    }
-    .conteudo input {
-        width: 25rem;
-    }
-    .mood-preparo textarea {
-        width: 25rem;
-        height: auto;
-    }
-    .botao {
-        flex-direction: column;
-        gap: 1rem;
-
-        margin-top: 1rem;
-    }
-    .botao button {
-        margin: 0;
-    }
 }
 @media (max-width: 375px) {
     .receita h1 {
@@ -271,37 +115,6 @@
     }
     .receita button {
         margin: 3rem 3rem;
-    }
-    .conteudo-modal {
-
-        border-radius: 0;
-
-        margin: 0;
-    }
-    .form h1 {
-        font-size: 3rem;
-    }
-    .conteudo {
-        flex-direction: column;
-    }
-    .conteudo label {
-        font-size: 1.5rem;
-    }
-    .conteudo input {
-        width: 25rem;
-    }
-    .mood-preparo textarea {
-        width: 25rem;
-        height: auto;
-    }
-    .botao {
-        flex-direction: column;
-        gap: 1rem;
-
-        margin-top: 1rem;
-    }
-    .botao button {
-        margin: 0;
     }
 }
 @media (max-width: 425px) {
@@ -325,37 +138,6 @@
     .receita button {
         margin: 3rem 3rem;
     }
-    .conteudo-modal {
-
-        border-radius: 0;
-
-        margin: 0;
-    }
-    .form h1 {
-        font-size: 3rem;
-    }
-    .conteudo {
-        flex-direction: column;
-    }
-    .conteudo label {
-        font-size: 1.5rem;
-    }
-    .conteudo input {
-        width: 25rem;
-    }
-    .mood-preparo textarea {
-        width: 25rem;
-        height: auto;
-    }
-    .botao {
-        flex-direction: column;
-        gap: 1rem;
-
-        margin-top: 1rem;
-    }
-    .botao button {
-        margin: 0;
-    }
 }
 @media (max-width: 480px) {
     .receita h1 {
@@ -377,37 +159,6 @@
     }
     .receita button {
         margin: 3rem 3rem;
-    }
-    .conteudo-modal {
-
-        border-radius: 0;
-
-        margin: 0;
-    }
-    .form h1 {
-        font-size: 3rem;
-    }
-    .conteudo {
-        flex-direction: column;
-    }
-    .conteudo label {
-        font-size: 1.5rem;
-    }
-    .conteudo input {
-        width: 25rem;
-    }
-    .mood-preparo textarea {
-        width: 25rem;
-        height: auto;
-    }
-    .botao {
-        flex-direction: column;
-        gap: 1rem;
-
-        margin-top: 1rem;
-    }
-    .botao button {
-        margin: 0;
     }
 }
 
