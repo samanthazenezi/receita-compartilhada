@@ -71,6 +71,11 @@
     width: 800px;
 }
 
+#modal.visivel {
+    opacity: 0;
+    visibility: hidden;
+}
+
 /* RESPONSIVIDADE */
 
 @media (max-width: 320px) {

@@ -2,6 +2,7 @@ import { ApiService } from './../../Services/api.service';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ReceitaDetalhada } from 'src/app/model/receita-detalhada.model';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-receitacompleta',
@@ -11,6 +12,16 @@ import { ReceitaDetalhada } from 'src/app/model/receita-detalhada.model';
 export class ReceitacompletaComponent implements OnInit {
 
   detalhe : ReceitaDetalhada
+
+  formEdicao = new FormGroup({
+    nomeIngrediente: new FormControl('', Validators.required),
+    quantidade: new FormControl('', Validators.required),
+    medida: new FormControl('', Validators.required),
+    preparo: new FormControl('', Validators.required),
+    nomeReceita: new FormControl('', Validators.required),
+    nomeUser: new FormControl('', Validators.required),
+    categoria: new FormControl('', Validators.required)
+  });
 
   constructor(private api: ApiService, private route: ActivatedRoute) {}
 

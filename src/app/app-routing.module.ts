@@ -6,10 +6,10 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
-  { path: "home", component: HomeComponent },
+  { path: "", component: HomeComponent },
   { path: "receita/:id", component: ReceitacompletaComponent },
   { path: "nova-receita", component: NovareceitaComponent },
-  { path: "", component: LoginComponent }
+  { path: "login", component: LoginComponent }
 ];
 
 @NgModule({
