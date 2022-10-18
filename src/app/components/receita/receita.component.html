@@ -1,4 +1,7 @@
 <div class="geral">
+    <div *ngIf="receitas.length < 1">
+      <h2>sem receitas no momento . . .</h2>
+    </div>
     <div *ngFor="let receita of receitas">
         <div class="receita">
             <div class="conteudo-receita">
@@ -8,7 +11,7 @@
                 <div class="botoes">
                     <a [routerLink]='["/receita", receita.id]'>Ver receita</a>
                     <button (click)="delete(receita.id)">Deletar</button>
-                </div> 
+                </div>
             </div>
         </div>
     </div>

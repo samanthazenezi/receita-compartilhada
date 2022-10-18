@@ -11,5 +11,18 @@ export class MenuComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  
+
+  taLogado(){
+    // obtem o token
+    var token = localStorage.getItem("token");
+
+    // retorna verdadeiro se tiver token
+    if (token)  {
+      return true
+    } else {
+    // retorna falso se nao tiver token
+      return false
+    }
+  }
+
 }
