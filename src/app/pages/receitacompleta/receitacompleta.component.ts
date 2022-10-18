@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ReceitaDetalhada } from 'src/app/model/receita-detalhada.model';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Ingredientes } from 'src/app/model/ingredientes.model';
 
 @Component({
   selector: 'app-receitacompleta',
@@ -12,6 +13,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 export class ReceitacompletaComponent implements OnInit {
 
   detalhe : ReceitaDetalhada
+  id = this.route.snapshot.paramMap.get('id');
 
   formEdicao = new FormGroup({
     nomeIngrediente: new FormControl('', Validators.required),
@@ -27,9 +29,7 @@ export class ReceitacompletaComponent implements OnInit {
 
 
   ngOnInit(): void {
-    const id = this.route.snapshot.paramMap.get('id'); 
-
-    this.api.get<ReceitaDetalhada>("recipes/" + id).subscribe( response => {
+    this.api.get<ReceitaDetalhada>("recipes/" + this.id).subscribe( response => {
       this.detalhe = response;
     }, error => {
       alert("Error")
@@ -37,6 +37,32 @@ export class ReceitacompletaComponent implements OnInit {
   }
 
   openClose() {
+    this.formEdicao.controls.nomeReceita.setValue(this.detalhe.name);
+    this.formEdicao.controls.categoria.setValue(this.detalhe.category);
+    this.formEdicao.controls.nomeUser.setValue(this.detalhe.user);
+    this.formEdicao.controls.preparo.setValue(this.detalhe.preparationMode);
+
     document.getElementById('modal').classList.toggle('visivel')
   }
+
+  remover(igrediente: Ingredientes){
+    var ingredientesAtualizados = this.detalhe.ingredients.filter(x => x.name !== igrediente.name);
+    this.detalhe.ingredients = ingredientesAtualizados;
+  }
+
+  atualizar(){
+  }
+
+  salvar(){
+    this.detalhe.category = this.formEdicao.controls.categoria.value;
+    this.detalhe.name = this.formEdicao.controls.nomeReceita.value;
+    this.detalhe.user = this.formEdicao.controls.nomeUser.value;
+    this.detalhe.preparationMode = this.formEdicao.controls.preparo.value;
+
+    this.api.put("recipes/" + this.id, this.detalhe).subscribe(
+      successo => { window.location.reload() },
+      err => { alert("Calma jaja a gente atualiza...") }
+    )
+  }
+
 }

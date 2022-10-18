@@ -42,7 +42,6 @@ export class NovareceitaComponent implements OnInit {
   }
 
   salvar(){
-    let modoPreparo = this.formIngredientes.controls.preparo.value;
     let body = new ReceitaDetalhada();
 
     body.name = this.formIngredientes.controls.nomeReceita.value;
@@ -54,7 +53,7 @@ export class NovareceitaComponent implements OnInit {
     this.api.post("recipes", body).subscribe( x => this.route.navigateByUrl(""),
     error => {
       alert("Calma bb!")
-    } 
-    ) 
+    }
+    )
   }
 }
