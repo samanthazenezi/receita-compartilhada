@@ -4,6 +4,6 @@
         <a [routerLink]='["/"]'>Ínicio</a>
         <a [routerLink]='["/nova-receita"]'>Adicionar receita</a>
         <a *ngIf="!taLogado()" [routerLink]='["/login"]'>Login</a>
-        <a *ngIf="taLogado()">Sair</a>
+        <a *ngIf="taLogado()" (click)="logout()">Sair</a>
     </div>
 </div>

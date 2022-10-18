@@ -1,6 +1,7 @@
 import { ApiService } from './../../Services/api.service';
 import { Receita } from './../../model/receita.model';
 import { Component, OnInit } from '@angular/core';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-receita',
@@ -11,7 +12,7 @@ export class ReceitaComponent implements OnInit {
 
   receitas : Receita[] = []
 
-  constructor( private api: ApiService) { }
+  constructor(private api: ApiService, private _snackBar: MatSnackBar) { }
 
   ngOnInit(): void {
 
@@ -25,9 +26,13 @@ export class ReceitaComponent implements OnInit {
   }
 
   delete(id: string) {
-    this.api.delete("recipes/" + id).subscribe( sucess => {
-      window.location.reload()
-    })
+    this.api.delete("recipes/" + id).subscribe(
+      sucess => { window.location.reload() },
+      err => { this.openSnackBar("Erro ao remover a receita", "Ok")})
+  }
+
+  openSnackBar(message: string, action: string) {
+    this._snackBar.open(message, action, { duration: 3000 });
   }
 
 }
