@@ -16,48 +16,6 @@
             <p>{{detalhe?.preparationMode }}</p>
         </div>
 
-        <button (click)="openClose()">Editar receita</button>
+        <button *ngIf="taLogado()" [routerLink]='["/editar-receita", id]' mat-flat-button color="primary">Editar receita</button>
     </div>
 
-    <!-- MODAL -->
-
-    <div id="modal" class="visivel">
-        <form [formGroup]="formEdicao" (ngSubmit)="salvar()" class="form">
-
-            <div class="conteudo-ingredientes">
-                <h2>Ingredientes:</h2>
-                <div *ngFor="let igred of detalhe.ingredients">
-                    <span>{{igred.name}} {{igred.amount}} {{igred.unit}}</span>
-                    <button (click)="remover(igred)">Remover</button>
-                    <button (click)="atualizar()">Atualizar</button>
-                </div>
-            </div>
-
-            <div class="descricao">
-                <div class="conteudo">
-                    <label for="nomeReceita">Nome da Receita:</label>
-                    <input type="text" formControlName="nomeReceita">
-                </div>
-
-                <div class="conteudo">
-                    <label for="nomeUser">Seu nome:</label>
-                    <input type="text" formControlName="nomeUser">
-                </div>
-
-                <div class="conteudo">
-                    <label for="categoria">Categoria:</label>
-                    <input type="text" formControlName="categoria">
-                </div>
-            </div>
-
-            <div class="preparo">
-                <h2>Modo de preparo:</h2>
-                <textarea name="preparo" cols="30" rows="10" formControlName="preparo"></textarea>
-            </div>
-
-            <div class="botao">
-                <button>Salvar</button>
-                <button (click)="openClose()">Voltar</button>
-            </div>
-        </form>
-    </div>

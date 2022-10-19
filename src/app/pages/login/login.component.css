@@ -4,78 +4,34 @@
     justify-content: center;
     align-items: center;
 }
-.login img {
-    width: 25rem;
+.login h1 {
+    color: #fff;
 
-    margin-block: 7rem;
+    text-align: center;
+    font-size: 5rem;
+    font-weight: 400;
+    line-height: 100%;
+
+    margin-block: 20rem;
 }
 .login form {
     display: flex;
     flex-direction: column;
-    gap: 5rem;
+    gap: 1rem;
 }
-.conteudo-form {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 0.5rem;
-}
-.conteudo-form label {
-    color: #000000;
 
-    font-size: 4rem;
-    font-weight: 600;
-    line-height: 100%;
-}
-.conteudo-form input {
-    outline: none;
 
-    color: #000000;
-
-    font-size: 2rem;
-    font-weight: 400;
-    line-height: 100%;
-
-    border: 1px solid #000000;
-    border-radius: 0.4rem;
-
-    padding: 0.5rem;
-
-    width: 20rem;
-    height: 4rem;
-}
 .login button {
-    margin: auto;
-
-    background-color: #000000;
-    color: #fff;
-
+    margin-top: 5rem;
     font-size: 2rem;
-    font-weight: 400;
-    line-height: 100%;
-
-    width: 14rem;
-    height: 4rem;
-
-    border-radius: 0.4rem;
-
-    cursor: pointer;
-
-    transition: 400ms;
 }
-.login button:hover {
-    background-color: #fff;
-    color: #000000;
-    border: 2px solid #000000;
-}
-
 
 
 @media (max-width: 320px) {
-    .login img {
-        width: 15rem;
-    
-        margin-block: 10rem;
+    .login h1 {
+        font-size: 4rem;
+
+        margin-block: 12rem;
     }
     .conteudo-form {
         flex-direction: column;
@@ -85,41 +41,23 @@
     }
 }
 @media (max-width: 375px) {
-    .login img {
-        width: 15rem;
-    
-        margin-block: 10rem;
-    }
-    .conteudo-form {
-        flex-direction: column;
-    }
-    .conteudo-form label {
-        font-size: 3.5rem;
+    .login h1 {
+        font-size: 4rem;
+
+        margin-block: 12rem;
     }
 }
 @media (max-width: 425px) {
-    .login img {
-        width: 15rem;
-    
-        margin-block: 10rem;
-    }
-    .conteudo-form {
-        flex-direction: column;
-    }
-    .conteudo-form label {
-        font-size: 3.5rem;
+    .login h1 {
+        font-size: 4rem;
+
+        margin-block: 12rem;
     }
 }
 @media (max-width: 480px) {
-    .login img {
-        width: 15rem;
-    
-        margin-block: 10rem;
-    }
-    .conteudo-form {
-        flex-direction: column;
-    }
-    .conteudo-form label {
-        font-size: 3.5rem;
+    .login h1 {
+        font-size: 4rem;
+
+        margin-block: 12rem;
     }
 }

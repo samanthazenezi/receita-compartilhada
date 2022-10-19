@@ -1,0 +1,43 @@
+.edicao {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.edicao h1 {
+    color: #fff;
+    
+    text-align: center;
+    font-size: 5rem;
+    font-weight: 600;
+    line-height: 100%;
+    
+    margin-block: 5rem;
+}
+.conteudo-ingredientes h2, .preparo h2 {
+    color: #fff;
+    
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 600;
+    line-height: 100%;
+    
+    margin-block: 5rem;
+}
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+.form-preparo {
+    width: 40rem;
+    height: 20rem;
+}
+
+.botao {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12rem;
+}

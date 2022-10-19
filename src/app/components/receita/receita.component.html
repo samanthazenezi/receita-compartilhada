@@ -1,18 +1,23 @@
+<div class="campobranco" *ngIf="receitas.length < 1">
+  <h2>Por enquanto não temos receitas!Volte mais tarde 💜</h2>
+</div>
+
 <div class="geral">
-    <div *ngIf="receitas.length < 1">
-      <h2>sem receitas no momento . . .</h2>
-    </div>
     <div *ngFor="let receita of receitas">
         <div class="receita">
             <div class="conteudo-receita">
-                <h1>{{receita.name}}</h1>
-                <p><i>{{receita.user}}</i></p>
-                <p>{{receita.category}}</p>
-                <div class="botoes">
-                    <a [routerLink]='["/receita", receita.id]'>Ver receita</a>
-                    <button (click)="delete(receita.id)">Deletar</button>
-                </div>
+                <mat-card class="example-card">
+                    <mat-card-title>{{receita.name}}</mat-card-title>
+                    <mat-card-subtitle><i>{{receita.user}}</i></mat-card-subtitle>
+                    <mat-card-subtitle>{{receita.category}}</mat-card-subtitle>
+                    <div class="botoes">
+                        <a [routerLink]='["/receita", receita.id]' mat-button>Ver receita</a>
+                        <button *ngIf="taLogado()" (click)="delete(receita.id)" mat-button>Deletar</button>
+                    </div>
+                </mat-card>
             </div>
         </div>
     </div>
 </div>
+
+

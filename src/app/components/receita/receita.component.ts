@@ -35,4 +35,16 @@ export class ReceitaComponent implements OnInit {
     this._snackBar.open(message, action, { duration: 3000 });
   }
 
+  taLogado(){
+    // obtem o token
+    var token = localStorage.getItem("token");
+
+    // retorna verdadeiro se tiver token
+    if (token)  {
+      return true
+    } else {
+    // retorna falso se nao tiver token
+      return false
+    }
+  }
 }

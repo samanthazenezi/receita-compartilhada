@@ -1,3 +1,17 @@
+.campobranco {
+    margin-top: 20rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.campobranco h2 {
+    color: #fff;
+
+    font-size: 3rem;
+    font-weight: 400;
+    line-height: 100%;
+}
 .geral {
     display: grid;
     grid-template-columns: repeat(5, minmax(250px, 1fr));
@@ -8,9 +22,6 @@
     margin: 10rem auto;
 }
 .conteudo-receita {
-    border: 3px solid #000000;
-    border-radius: 8px;
-
     width: 30rem;
 
     padding: 15px;
@@ -19,22 +30,14 @@
     flex-direction: column;
     gap: 15px;
 }
-.conteudo-receita:hover {
-    border: 3px solid #5eb1bf;
-}
-.conteudo-receita h1 {
-    color: #000000;
 
+.mat-card-title {
     font-size: 3rem;
-    font-weight: 400;
-    line-height: 100%;
-}
-.conteudo-receita p {
-    color: #000000;
 
-    font-size: 20px;
-    font-weight: 400;
-    line-height: 100%;
+    margin-bottom: 3rem;
+}
+.mat-card-subtitle {
+    font-size: 2rem;
 }
 .botoes {
     display: flex;
@@ -43,57 +46,12 @@
     gap: 1rem;
 }
 .botoes a {
-    background-color: #5eb1bf;
-    color: #edf6f9;
-
-    border: none;
-    border-radius: 20px;
-
-    text-decoration: none;
-    text-align: center;
-    font-size: 18px;
-    line-height: 100%;
-
-    padding: 8px 10px;
-
-    width: 120px;
-
-    margin: auto;
-
-    cursor: pointer;
-
-    transition: 400ms;
-}
-.botoes a:hover {
-    background-color: #0081a7;
-    filter: brightness(1.1);
+    font-size: 1.8rem;
 }
 .botoes button {
-    background-color: #e63946;
-    color: #edf6f9;
-
-    border: none;
-    border-radius: 20px;
-
-    text-decoration: none;
-    text-align: center;
-    font-size: 18px;
-    line-height: 100%;
-
-    padding: 8px 10px;
-
-    width: 120px;
-
-    margin: auto;
-
-    cursor: pointer;
-
-    transition: 400ms;
+    font-size: 1.8rem;
 }
-.botoes button:hover {
-    background-color: #d00000;
-    filter: brightness(1.1);
-}
+
 
 @media (max-width: 320px) {
     .geral {
@@ -106,6 +64,14 @@
     }
     .conteudo-receita {
         width: 25rem;
+    }
+    .campobranco {
+        max-width: 20rem;
+        margin-inline: auto;
+    }
+    .campobranco h2 {
+        font-size: 2rem;
+        margin-inline: auto;
     }
 }
 @media (max-width: 375px) {
@@ -120,6 +86,14 @@
     .conteudo-receita {
         width: 30rem;
     }
+    .campobranco {
+        max-width: 30rem;
+        margin-inline: auto;
+    }
+    .campobranco h2 {
+        font-size: 2.5rem;
+        margin-inline: auto;
+    }
 }
 @media (max-width: 425px) {
     .geral {
@@ -133,6 +107,14 @@
     .conteudo-receita {
         width: 30rem;
     }
+    .campobranco {
+        max-width: 35rem;
+        margin-inline: auto;
+    }
+    .campobranco h2 {
+        font-size: 3rem;
+        margin-inline: auto;
+    }
 }
 @media (max-width: 480px) {
     .geral {
@@ -145,6 +127,14 @@
     }
     .conteudo-receita {
         width: 30rem;
+    }
+    .campobranco {
+        max-width: 35rem;
+        margin-inline: auto;
+    }
+    .campobranco h2 {
+        font-size: 3rem;
+        margin-inline: auto;
     }
 }
 

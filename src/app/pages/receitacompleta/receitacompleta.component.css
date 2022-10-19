@@ -2,32 +2,13 @@
     margin-top: 10rem;
 }
 .receita button {
-    background-color: #5eb1bf;
-    color: #edf6f9;
-    
-    border: none;
-    border-radius: 2rem;
-    
-    padding: 0.8rem 2rem;
-
-    text-decoration: none;
     font-size: 2rem;
-    font-weight: 400;
-    line-height: 100%;
     
     margin: 5rem 9rem;
+}
 
-    cursor: pointer;
-    
-    transition: 400ms;
-}
-.receita button:hover {
-    color: #000000;
-    background-color: #0081a7;
-    filter: brightness(1.1);
-}
 .receita h1 {
-    color: #000000;
+    color: #fff;
 
     text-align: center;
     text-transform: uppercase;
@@ -38,7 +19,7 @@
     margin-block: 5rem;
 }
 .ingredientes h2, .preparo h2 {
-    color: #000000;
+    color: #fff;
 
     text-align: left;
     font-size: 3rem;
@@ -55,13 +36,12 @@
     gap: 0.5rem;
 }
 .list p, .preparo p {
-    color: #000000;
+    color: #fff;
 
     text-align: left;
     font-size: 2rem;
     font-weight: 400;
     line-height: 100%;
-    
 }
 .preparo {
     margin-top: 5rem;
@@ -69,11 +49,6 @@
 .preparo p {
     word-wrap: break-word;
     width: 800px;
-}
-
-#modal.visivel {
-    opacity: 0;
-    visibility: hidden;
 }
 
 /* RESPONSIVIDADE */
