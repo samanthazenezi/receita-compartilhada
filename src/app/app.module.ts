@@ -23,6 +23,7 @@ import {MatDialogModule} from '@angular/material/dialog';
 import { ModalComponent } from './components/modal/modal.component';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatIconModule} from '@angular/material/icon';
+import {MatSelectModule} from '@angular/material/select';
 
 
 @NgModule({
@@ -53,7 +54,8 @@ import {MatIconModule} from '@angular/material/icon';
     MatInputModule,
     MatDialogModule,
     MatMenuModule,
-    MatIconModule
+    MatIconModule,
+    MatSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]

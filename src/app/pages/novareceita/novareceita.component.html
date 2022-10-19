@@ -13,9 +13,13 @@
         <input matInput type="text" formControlName="nomeUser" placeholder="Ex. Maria">
       </mat-form-field>
   
-      <mat-form-field class="example-full-width" appearance="fill">
-        <mat-label for="categoria">Categoria:</mat-label>
-        <input matInput type="text" formControlName="categoria" placeholder="Ex. Bolo">
+      <mat-form-field appearance="fill">
+        <mat-label>Categoria:</mat-label>
+        <select matNativeControl required>
+          <option value="doce">Doce</option>
+          <option value="salgado">salgado</option>
+          <option value="liquido">líquido</option>
+        </select>
       </mat-form-field>
     </div>
 
@@ -34,9 +38,23 @@
             <input matInput type="text" formControlName="quantidade" placeholder="Ex. 100">
           </mat-form-field>
   
-          <mat-form-field class="example-full-width" appearance="fill">
-            <mat-label for="medida">Unidade de medida:</mat-label>
-            <input matInput type="text" formControlName="medida" placeholder="Ex. gramas">
+          <mat-form-field appearance="fill">
+            <mat-label>Unidade de medida:</mat-label>
+            <select matNativeControl required>
+              <option value="ml">ml</option>
+              <option value="gramas">gramas</option>
+              <option value="unidade">unidade</option>
+              <option value="colheressopa">colheres de sopa</option>
+              <option value="colhersopa">colher de sopa</option>
+              <option value="colherercafe">colheres de café</option>
+              <option value="colhercafe">colher de café</option>
+              <option value="colherersobremesa">colheres de sobremesa</option>
+              <option value="colhersobremesa">colher de sobremesa</option>
+              <option value="xicaras">xícaras</option>
+              <option value="xicara">xícaras</option>
+              <option value="copo">copo</option>
+              <option value="copos">copos</option>
+            </select>
           </mat-form-field>
   
           <button  class="botao-add" type="button" (click)="adicionarIngredientes()" mat-flat-button color="primary">Adicionar</button>

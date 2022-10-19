@@ -30,12 +30,10 @@
   align-items: center;
   justify-content: center;
 }
-.example-full-width {
+.example-full-width, .mat-form-field {
   width: 50rem;
-}
-.example-full-width input {
   color: #fff;
-  font-size: 2rem;
+  font-size: 2rem
 }
 .example-full-width textarea {
   color: #fff;

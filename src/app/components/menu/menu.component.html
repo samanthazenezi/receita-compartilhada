@@ -21,7 +21,7 @@
 
                 <button mat-menu-item>
                     <a *ngIf="!taLogado()" [routerLink]='["/login"]' mat-button>Login</a>
-                    <a *ngIf="taLogado()" (click)="logout()" mat-button>Sair</a>
+                    <a *ngIf="taLogado()"  (click)="logout()" mat-button>Sair</a>
                 </button>
               </mat-menu>
         </div>
