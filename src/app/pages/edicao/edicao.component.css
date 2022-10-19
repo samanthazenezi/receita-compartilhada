@@ -86,7 +86,7 @@
     font-size: 2.5rem;
   }
   .example-full-width {
-    width: 27rem;
+    width: 25rem;
   }
   .list {
     flex-direction: column;
@@ -97,7 +97,7 @@
     margin-bottom: 2rem;
   }
   .form-preparo {
-    width: 27rem;
+    width: 25rem;
   }
   .botao {
     gap: 9rem;

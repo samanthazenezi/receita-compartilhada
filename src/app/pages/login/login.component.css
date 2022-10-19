@@ -30,36 +30,36 @@
 
 
 @media (max-width: 320px) {
-    .login h1 {
-        font-size: 4rem;
+  .login h1 {
+    font-size: 4rem;
 
-        margin-block: 12rem;
-    }
-    .conteudo-form {
-        flex-direction: column;
-    }
-    .conteudo-form label {
-        font-size: 3.5rem;
-    }
+    margin-block: 12rem;
+  }
+  .conteudo-form {
+    flex-direction: column;
+  }
+  .conteudo-form label {
+    font-size: 3.5rem;
+  }
 }
 @media (max-width: 375px) {
-    .login h1 {
-        font-size: 4rem;
+  .login h1 {
+    font-size: 4rem;
 
-        margin-block: 12rem;
-    }
+    margin-block: 12rem;
+  }
 }
 @media (max-width: 425px) {
-    .login h1 {
-        font-size: 4rem;
+  .login h1 {
+    font-size: 4rem;
 
-        margin-block: 12rem;
-    }
+    margin-block: 12rem;
+  }
 }
 @media (max-width: 480px) {
-    .login h1 {
-        font-size: 4rem;
+  .login h1 {
+    font-size: 4rem;
 
-        margin-block: 12rem;
-    }
+    margin-block: 12rem;
+  }
 }

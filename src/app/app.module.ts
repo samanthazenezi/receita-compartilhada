@@ -21,6 +21,8 @@ import {MatInputModule} from '@angular/material/input';
 import { NovouserComponent } from './pages/novouser/novouser.component';
 import {MatDialogModule} from '@angular/material/dialog';
 import { ModalComponent } from './components/modal/modal.component';
+import {MatMenuModule} from '@angular/material/menu';
+import {MatIconModule} from '@angular/material/icon';
 
 
 @NgModule({
@@ -49,7 +51,9 @@ import { ModalComponent } from './components/modal/modal.component';
     MatButtonModule,
     MatCardModule,
     MatInputModule,
-    MatDialogModule
+    MatDialogModule,
+    MatMenuModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]

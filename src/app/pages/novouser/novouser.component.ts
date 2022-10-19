@@ -1,6 +1,6 @@
-import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
 import { NewUser } from 'src/app/model/new-user.model';
 import { ApiService } from 'src/app/Services/api.service';
@@ -20,7 +20,10 @@ export class NovouserComponent implements OnInit {
     password: new FormControl('', Validators.required)
   });
 
-  constructor(private api: ApiService, private http: HttpClient, private router: Router) { }
+  constructor(
+    private api: ApiService, 
+    private _snackBar: MatSnackBar, 
+    private router: Router) { }
 
   ngOnInit(): void {
   }
@@ -33,11 +36,13 @@ export class NovouserComponent implements OnInit {
     body.password = this.formNewUser.controls.password.value;
 
 
-    this.api.post("recipes", body).subscribe( x => this.router.navigateByUrl(""),
-    error => {
-      alert("Calma bb!")
-    }
+    this.api.post("user", body).subscribe( x => this.router.navigateByUrl(""),
+    error => { this.openSnackBar("Opa! Algo deu errado", "Ok") }
     )
+  }
+
+  openSnackBar(message: string, action: string) {
+    this._snackBar.open(message, action, { duration: 3000 });
   }
 
 }

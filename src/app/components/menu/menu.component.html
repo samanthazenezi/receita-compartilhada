@@ -1,6 +1,30 @@
 <mat-toolbar color="primary">
     <div class="menu-container">
-        <h1>Receita Compartilhada</h1>
+        <div class="logo">
+            <h1>Receita Compartilhada</h1>
+            <img src="assets/logo.png" alt="imagem-icone-logo">
+        </div>
+        <div class="menu-hamburguer">
+            <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+                <mat-icon>more_vert</mat-icon>
+              </button>
+              <mat-menu #menu="matMenu">
+                <button mat-menu-item>
+                    <a [routerLink]='["/"]' mat-button>Home</a>
+                </button>
+                <button mat-menu-item>
+                    <a *ngIf="taLogado()" [routerLink]='["/novo-usuario"]' mat-button>Cadastrar usuário</a>
+                </button>
+                <button mat-menu-item>
+                    <a *ngIf="taLogado()" [routerLink]='["/nova-receita"]' mat-button>Adicionar receita</a>
+                </button>
+
+                <button mat-menu-item>
+                    <a *ngIf="!taLogado()" [routerLink]='["/login"]' mat-button>Login</a>
+                    <a *ngIf="taLogado()" (click)="logout()" mat-button>Sair</a>
+                </button>
+              </mat-menu>
+        </div>
         <div class="botoes">
             <a [routerLink]='["/"]' mat-button>Home</a>
             <a *ngIf="taLogado()" [routerLink]='["/novo-usuario"]' mat-button>Cadastrar usuário</a>

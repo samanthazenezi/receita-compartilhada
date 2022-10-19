@@ -24,7 +24,10 @@
 .example-full-width {
   width: 50rem;
 }
-
+.example-full-width input {
+  color: #fff;
+  font-size: 2rem;
+}
 
 @media (max-width: 320px) {
   .cadastro h1 {

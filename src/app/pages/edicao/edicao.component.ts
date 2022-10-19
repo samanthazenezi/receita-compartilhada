@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ModalComponent } from 'src/app/components/modal/modal.component';
 import { Ingredientes } from 'src/app/model/ingredientes.model';
@@ -32,7 +33,8 @@ export class EdicaoComponent implements OnInit {
     private api: ApiService,
     private route: ActivatedRoute,
     private router: Router,
-    private dialog: MatDialog) { }
+    private dialog: MatDialog,
+    private _snackBar: MatSnackBar) { }
 
   ngOnInit(): void {
     this.api.get<ReceitaDetalhada>("recipes/" + this.id).subscribe( response => {
@@ -41,9 +43,12 @@ export class EdicaoComponent implements OnInit {
       this.formEdicao.controls.categoria.setValue(this.detalhe.category);
       this.formEdicao.controls.nomeUser.setValue(this.detalhe.user);
       this.formEdicao.controls.preparo.setValue(this.detalhe.preparationMode);
-    }, error => {
-      alert("Error")
-    } )
+    }, error => { this.openSnackBar("Opa! Algo deu errado", "Ok")} 
+    )
+  }
+
+  openSnackBar(message: string, action: string) {
+    this._snackBar.open(message, action, { duration: 3000 });
   }
 
   remover(igrediente: Ingredientes){
@@ -63,7 +68,7 @@ export class EdicaoComponent implements OnInit {
 
     this.api.put("recipes/" + this.id, this.detalhe).subscribe(
       successo => { this.router.navigateByUrl("receita/" + this.id) },
-      err => { alert("Calma jaja a gente atualiza...") }
+      err => { this.openSnackBar("Opa! Algo deu errado", "Ok") }
     )
   }
 

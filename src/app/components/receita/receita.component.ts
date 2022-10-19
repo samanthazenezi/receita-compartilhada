@@ -20,19 +20,14 @@ export class ReceitaComponent implements OnInit {
       response.forEach( x => {
         this.receitas.push(x)
       })
-    }, error => {
-      alert("Calma bb!")
-    } )
+    }, error => { this.openSnackBar("Opa! Algo deu errado", "Ok")} 
+    )
   }
 
   delete(id: string) {
     this.api.delete("recipes/" + id).subscribe(
       sucess => { window.location.reload() },
-      err => { this.openSnackBar("Erro ao remover a receita", "Ok")})
-  }
-
-  openSnackBar(message: string, action: string) {
-    this._snackBar.open(message, action, { duration: 3000 });
+      error => { this.openSnackBar("Erro ao remover a receita", "Ok")})
   }
 
   taLogado(){
@@ -46,5 +41,9 @@ export class ReceitaComponent implements OnInit {
     // retorna falso se nao tiver token
       return false
     }
+  }
+
+  openSnackBar(message: string, action: string) {
+    this._snackBar.open(message, action, { duration: 3000 });
   }
 }

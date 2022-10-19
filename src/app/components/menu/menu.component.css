@@ -8,14 +8,25 @@
 
     padding: 4rem;
 }
-.menu-container img {
-    width: 7rem;
+.logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+.logo img {
+    width: 4.5rem;
 }
 .botoes {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 2rem;
+}
+
+.menu-hamburguer {
+    display: none;
 }
 
 
@@ -25,10 +36,17 @@
 
         padding: 1rem;
     }
-    .menu-container img {
-        width: 50px;
+    .logo h1 {
+        font-size: 1.8rem;
+    }
+    .logo img {
+        width: 2.5rem;
+    }
+    .menu-hamburguer {
+        display: flex;
     }
     .botoes {
+        display: none;
         gap: 1rem;
     }
     .botoes a:first-child, .botoes a:last-child {
@@ -44,10 +62,11 @@
 
         padding: 1rem;
     }
-    .menu-container img {
-        width: 60px;
+    .menu-hamburguer {
+        display: flex;
     }
     .botoes {
+        display: none;
         gap: 1rem;
     }
     .botoes a:first-child, .botoes a:last-child{
@@ -61,10 +80,11 @@
     .menu-container {
         padding: 1rem;
     }
-    .menu-container img {
-        width: 60px;
+    .menu-hamburguer {
+        display: flex;
     }
     .botoes {
+        display: none;
         gap: 1rem;
     }
     .botoes a:first-child, .botoes a:last-child{
@@ -78,10 +98,11 @@
     .menu-container {
         padding: 1rem;
     }
-    .menu-container img {
-        width: 60px;
+    .menu-hamburguer {
+        display: flex;
     }
     .botoes {
+        display: none;
         gap: 1rem;
     }
     .botoes a:first-child, .botoes a:last-child{
