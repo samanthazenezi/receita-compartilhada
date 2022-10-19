@@ -1,153 +1,82 @@
+.novareceita {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 .novareceita h1 {
-    color: #fff;
+  color: #fff;
 
-    text-align: center;
-    font-size: 5rem;
-    font-weight: 600;
-    line-height: 100%;
+  text-align: center;
+  font-size: 5rem;
+  font-weight: 600;
+  line-height: 100%;
 
-    margin-block: 5rem;
+  margin-block: 5rem;
 }
-.conteudo-ingredientes h2 {
-    color: #fff;
+.conteudo-ingredientes h2, .preparo h2 {
+  color: #fff;
 
-    font-size: 3rem;
-    font-weight: 600;
-    line-height: 100%;
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 600;
+  line-height: 100%;
 
-    margin: 3rem 10rem;
+  margin-block: 3rem;
 }
-.conteudo-ingredientes {
-    display: flex;
-    flex-direction: column;
+.example-full-width {
+  width: 50rem;
 }
-.conteudo-ingredientes button {
-    height: 5rem;
-}
-.conteudo-form, .descricao {
-    margin: 3rem 10rem;
+.botao-add, .botao {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-    display: flex;
-    gap: 3rem;
+  margin: 2rem auto;
 }
-.conteudo-form button, .botao button {
-    font-size: 2rem;
-}
-.lista p {
-    color: #fff;
 
-    font-size: 2rem;
-    font-weight: 400;
-    line-height: 100%;
-
-    margin: 1rem 10rem;
-}
-.preparo {
-    margin: 3rem 10rem;
-}
-.preparo h2 {
-    color: #fff;
-
-    font-size: 3rem;
-    font-weight: 600;
-    line-height: 100%;
-
-    margin-bottom: 2rem;
-}
-.form-preparo {
-    width: 60rem;
-    height: 20rem;
-}
-.botao {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
 @media (max-width: 320px) {
-    .novareceita, .ingredientes, .form, .conteudo-ingredientes, 
-    .conteudo-form, .descricao, .preparo, .conteudo {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 2rem;
-        
-        margin: 0;
-    }
-    .novareceita h1 {
-        font-size: 3.5rem;
-    }
-    .conteudo-ingredientes h2, .preparo h2 {
-        font-size: 2.5rem;
-        margin: 2rem 0;
-    }
-    .form-preparo {
-        width: 28rem;
-    }
-    .lista p {
-        margin: 1rem 0;
-    }
-    .botao {
-        margin-block: 1rem;
-    }
-   
+  .novareceita h1 {
+    font-size: 3.5rem;
+  }
+  .example-full-width {
+    width: 30rem;
+  }
+  .conteudo-ingredientes h2, .preparo h2 {
+    font-size: 2.5rem;
+  }
 }
 @media (max-width: 375px) {
-    .novareceita, .ingredientes, .form, .conteudo-ingredientes, 
-    .conteudo-form, .descricao, .preparo, .conteudo {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 2rem; 
-
-        margin: 0;
-    }
-    .novareceita h1 {
-        font-size: 3.5rem;
-    }
-    .conteudo-ingredientes h2, .preparo h2 {
-        font-size: 2.5rem;
-        margin: 2rem 0;
-    }
-    .form-preparo {
-        width: 28rem;
-    }
-    .lista p {
-        margin: 1rem 0;
-    }
-    .botao {
-        margin-block: 1rem;
-    }
-   
+  .novareceita h1 {
+    font-size: 4rem;
+  }
+  .example-full-width {
+    width: 32rem;
+  }
+  .conteudo-ingredientes h2, .preparo h2 {
+    font-size: 3rem;
+  }
 }
 @media (max-width: 425px) {
-    .novareceita, .ingredientes, .form, .conteudo-ingredientes, 
-    .conteudo-form, .descricao, .preparo, .conteudo {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 2rem; 
-
-        margin: 0;
-    }
-    .novareceita h1 {
-        font-size: 3.5rem;
-    }
-    .conteudo-ingredientes h2, .preparo h2 {
-        font-size: 2.5rem;
-        margin: 2rem 0;
-    }
-    .form-preparo {
-        width: 28rem;
-    }
-    .lista p {
-        margin: 1rem 0;
-    }
-    .botao {
-        margin-block: 1rem;
-    }
-   
+  .novareceita h1 {
+    font-size: 4rem;
+  }
+  .example-full-width {
+    width: 32rem;
+  }
+  .conteudo-ingredientes h2, .preparo h2 {
+    font-size: 3rem;
+  }
+}
+@media (max-width: 480px) {
+  .novareceita h1 {
+    font-size: 4rem;
+  }
+  .example-full-width {
+    width: 32rem;
+  }
+  .conteudo-ingredientes h2, .preparo h2 {
+    font-size: 3rem;
+  }
 }

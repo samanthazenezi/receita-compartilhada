@@ -5,6 +5,7 @@ import { ReceitacompletaComponent } from './pages/receitacompleta/receitacomplet
 import { HomeComponent } from './pages/home/home.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { NovouserComponent } from './pages/novouser/novouser.component';
 
 const routes: Routes = [
   { path: "", component: HomeComponent },
@@ -12,6 +13,7 @@ const routes: Routes = [
   { path: "nova-receita", component: NovareceitaComponent },
   { path: "login", component: LoginComponent },
   { path: "editar-receita/:id", component: EdicaoComponent },
+  { path: "novo-usuario", component: NovouserComponent }
 ];
 
 @NgModule({

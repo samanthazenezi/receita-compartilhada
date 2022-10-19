@@ -1,0 +1,19 @@
+<div mat-dialog-content>
+  <h2>Atualizar ingredientes</h2>
+    <mat-form-field appearance="fill">
+      <mat-label>Ingrediente:</mat-label>
+      <input [(ngModel)]="data.name" matInput>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Quantidade:</mat-label>
+      <input [(ngModel)]="data.amount" matInput>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Unidade de medida:</mat-label>
+      <input [(ngModel)]="data.unit" matInput>
+    </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Cancelar</button>
+  <button mat-raised-button [mat-dialog-close]="data" cdkFocusInitial>Atualizar</button>
+</div>

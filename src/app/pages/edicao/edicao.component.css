@@ -1,43 +1,180 @@
 .edicao {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .edicao h1 {
-    color: #fff;
-    
-    text-align: center;
-    font-size: 5rem;
-    font-weight: 600;
-    line-height: 100%;
-    
-    margin-block: 5rem;
+  color: #fff;
+
+  text-align: center;
+  font-size: 5rem;
+  font-weight: 600;
+  line-height: 100%;
+
+  margin-block: 5rem;
 }
 .conteudo-ingredientes h2, .preparo h2 {
-    color: #fff;
-    
-    text-align: center;
-    font-size: 3rem;
-    font-weight: 600;
-    line-height: 100%;
-    
-    margin-block: 5rem;
+  color: #fff;
+
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 600;
+  line-height: 100%;
+
+  margin-block: 5rem;
 }
-.form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
+.example-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.list {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+
+  margin-bottom: 2rem;
+}
+.list p {
+  color: #fff;
+
+  font-size: 2rem;
+}
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.example-full-width {
+  display: flex;
+  flex-direction: column;
+
+  width: 50rem;
+}
+.example-full-width input {
+  color: #fff;
+  font-size: 2rem;
 }
 .form-preparo {
-    width: 40rem;
-    height: 20rem;
+  width: 50rem;
+  height: 20rem;
+}
+.form-preparo textarea {
+  color: #fff;
+  font-size: 2rem;
+}
+.botao {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12rem;
+
+  margin-bottom: 3rem;
 }
 
-.botao {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 12rem;
+
+@media (max-width: 320px) {
+  .edicao h1 {
+    font-size: 3.5rem;
+  }
+  .conteudo-ingredientes h2, .preparo h2 {
+    font-size: 2.5rem;
+  }
+  .example-full-width {
+    width: 27rem;
+  }
+  .list {
+    flex-direction: column;
+    gap: 1rem;
+    margin: 0;
+  }
+  .buttons {
+    margin-bottom: 2rem;
+  }
+  .form-preparo {
+    width: 27rem;
+  }
+  .botao {
+    gap: 9rem;
+  }
+}
+@media (max-width: 375px) {
+  .edicao h1 {
+    font-size: 3.5rem;
+  }
+  .conteudo-ingredientes h2, .preparo h2 {
+    font-size: 2.5rem;
+  }
+  .example-full-width {
+    width: 30rem;
+  }
+  .list {
+    flex-direction: column;
+    gap: 1rem;
+    margin: 0;
+  }
+  .buttons {
+    margin-bottom: 2rem;
+  }
+  .form-preparo {
+    width: 30rem;
+  }
+  .botao {
+    gap: 10rem;
+  }
+}
+@media (max-width: 425px) {
+  .edicao h1 {
+    font-size: 4rem;
+  }
+  .conteudo-ingredientes h2, .preparo h2 {
+    font-size: 3rem;
+  }
+  .example-full-width {
+    width: 32rem;
+  }
+  .list {
+    flex-direction: column;
+    gap: 1rem;
+    margin: 0;
+  }
+  .buttons {
+    margin-bottom: 2rem;
+  }
+  .form-preparo {
+    width: 32rem;
+  }
+  .botao {
+    gap: 10rem;
+  }
+}
+@media (max-width: 480px) {
+  .edicao h1 {
+    font-size: 4rem;
+  }
+  .conteudo-ingredientes h2, .preparo h2 {
+    font-size: 3rem;
+  }
+  .example-full-width {
+    width: 32rem;
+  }
+  .list {
+    flex-direction: column;
+    gap: 1rem;
+    margin: 0;
+  }
+  .buttons {
+    margin-bottom: 2rem;
+  }
+  .form-preparo {
+    width: 32rem;
+  }
+  .botao {
+    gap: 10rem;
+  }
 }

@@ -1,56 +1,42 @@
+<app-menu></app-menu>
 <div class="edicao">
     <h1>Editar receita</h1>
-    <form [formGroup]="formEdicao" (ngSubmit)="salvar()" class="form">
+    <form [formGroup]="formEdicao" (ngSubmit)="salvar()" class="example-form">
+      <div class="descricao">
+        <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label for="nomeReceita">Nome da Receita:</mat-label>
+          <input matInput type="text" formControlName="nomeReceita">
+        </mat-form-field>
+        <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label for="nomeUser">Seu nome:</mat-label>
+          <input matInput type="text" formControlName="nomeUser">
+        </mat-form-field>
+        <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label for="categoria">Categoria:</mat-label>
+          <input matInput type="text" formControlName="categoria">
+        </mat-form-field>
+      </div>
 
-        <div class="conteudo-ingredientes">
-            <h2>Ingredientes:</h2>
-            <div *ngFor="let igred of detalhe.ingredients">
-                <p>{{igred.name}} {{igred.amount}} {{igred.unit}}</p>
-                <button (click)="remover(igred)">Remover</button>
-                <button (click)="atualizar()">Atualizar</button>
-            </div>
-        </div>
-    </form>
+      <div class="conteudo-ingredientes">
+          <h2>Ingredientes:</h2>
+          <div *ngFor="let igred of detalhe.ingredients" class="list">
+              <p>{{igred.name}} {{igred.amount}} {{igred.unit}}</p>
+              <div class="buttons">
+                <button type="button" (click)="remover(igred)" mat-stroked-button color="primary">Remover</button>
+                <button type="button" (click)="atualizar(igred)" mat-flat-button color="primary">Atualizar</button>
+              </div>
+          </div>
+      </div>
 
-    <div class="descricao">
-        <div class="conteudo">
-            <form class="example-form">
-                <mat-form-field class="example-full-width" appearance="fill">
-                    <mat-label for="nomeReceita">Nome da Receita:</mat-label>
-                    <input matInput type="text" formControlName="nomeReceita">
-                </mat-form-field>
-            </form>
-            <form class="example-form">
-                <mat-form-field class="example-full-width" appearance="fill">
-                    <mat-label for="nomeUser">Seu nome:</mat-label>
-                    <input matInput type="text" formControlName="nomeUser">
-                </mat-form-field>
-            </form>
-            <form class="example-form">
-                <mat-form-field class="example-full-width" appearance="fill">
-                    <mat-label for="categoria">Categoria:</mat-label>
-                    <input matInput type="text" formControlName="categoria">
-                </mat-form-field>
-            </form>
-        </div>
-    </div>
-
-    <div class="preparo">
-        <h2>Modo de preparo:</h2>
-        <form class="example-form">
+      <div class="preparo">
+          <h2>Modo de preparo:</h2>
             <mat-form-field class="example-full-width" appearance="fill" class="form-preparo">
                 <textarea matInput name="preparo" formControlName="preparo"></textarea>
             </mat-form-field>
-        </form>
-    </div>
-
-    <div class="botao">
-        <button mat-flat-button color="primary">Salvar</button>
-        <button [routerLink]='["/receita", id]' mat-flat-button color="primary">Voltar</button>
-    </div>
-
+      </div>
+      <div class="botao">
+          <button type="button" [routerLink]='["/receita", id]' mat-stroked-button color="primary">Cancelar</button>
+          <button type="submit" mat-flat-button color="primary">Salvar</button>
+      </div>
+    </form>
 </div>
-
-
-
-

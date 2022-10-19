@@ -9,7 +9,7 @@ import { ReceitaComponent } from './components/receita/receita.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HttpClientModule } from '@angular/common/http';
 import { NovareceitaComponent } from './pages/novareceita/novareceita.component'
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './pages/login/login.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
@@ -18,6 +18,9 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatButtonModule} from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
 import {MatInputModule} from '@angular/material/input';
+import { NovouserComponent } from './pages/novouser/novouser.component';
+import {MatDialogModule} from '@angular/material/dialog';
+import { ModalComponent } from './components/modal/modal.component';
 
 
 @NgModule({
@@ -31,10 +34,13 @@ import {MatInputModule} from '@angular/material/input';
     NovareceitaComponent,
     LoginComponent,
     EdicaoComponent,
+    NovouserComponent,
+    ModalComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
     HttpClientModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
@@ -42,7 +48,8 @@ import {MatInputModule} from '@angular/material/input';
     MatToolbarModule,
     MatButtonModule,
     MatCardModule,
-    MatInputModule
+    MatInputModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]

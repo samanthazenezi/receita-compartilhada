@@ -1,27 +1,22 @@
 <div class="login">
     <h1>Receita Compartilhada</h1>
 
-    <form [formGroup]="formLogin" (ngSubmit)="salvar()">
+    <form class="example-form" [formGroup]="formLogin" (ngSubmit)="salvar()">
 
-        <form class="example-form">
-            <mat-form-field class="example-full-width" appearance="fill">
-                <mat-label for="login">Login:</mat-label>
-                <input matInput type="text" formControlName="userName" placeholder="Ex. mariazinha">
-            </mat-form-field>
-        </form>
-    
-        <form class="example-form">
-            <mat-form-field class="example-full-width" appearance="fill">
-                <mat-label for="senha">Senha:</mat-label>
-                <input matInput type="password" formControlName="password" placeholder="Insira a senha.">
-            </mat-form-field>
-        </form>
-       
-    
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label for="login">Login:</mat-label>
+        <input matInput type="text" formControlName="userName" placeholder="Ex. mariazinha">
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label for="senha">Senha:</mat-label>
+        <input matInput type="password" formControlName="password" placeholder="Insira a senha.">
+      </mat-form-field>
+
         <button type="submit" mat-flat-button color="primary">Login</button>
     </form>
 </div>
-    
+
 
 
 

@@ -3,10 +3,9 @@
 }
 .receita button {
     font-size: 2rem;
-    
+
     margin: 5rem 9rem;
 }
-
 .receita h1 {
     color: #fff;
 
@@ -44,7 +43,7 @@
     line-height: 100%;
 }
 .preparo {
-    margin-top: 5rem;
+    margin-block: 5rem;
 }
 .preparo p {
     word-wrap: break-word;

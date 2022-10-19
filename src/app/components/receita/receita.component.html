@@ -12,7 +12,7 @@
                     <mat-card-subtitle>{{receita.category}}</mat-card-subtitle>
                     <div class="botoes">
                         <a [routerLink]='["/receita", receita.id]' mat-button>Ver receita</a>
-                        <button *ngIf="taLogado()" (click)="delete(receita.id)" mat-button>Deletar</button>
+                        <button *ngIf="taLogado()" (click)="delete(receita.id)" mat-stroked-button color="primary">Deletar</button>
                     </div>
                 </mat-card>
             </div>

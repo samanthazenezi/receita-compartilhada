@@ -2,93 +2,75 @@
 
 <div class="novareceita">
     <h1>Nova Receita</h1>
-    <div class="ingredientes">
-        <form [formGroup]="formIngredientes" (ngSubmit)="salvar()" class="form">
+    <form class="example-form" [formGroup]="formIngredientes" (ngSubmit)="salvar()" class="form">
+      <div class="conteudo-ingredientes">
+        <h2>Ingredientes:</h2>
 
-            <div class="conteudo-ingredientes">
-                <h2>Ingredientes:</h2>
+        <div class="conteudo-form">
+          <div class="conteudo">
+              <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label for="nome">Nome do ingrediente:</mat-label>
+                <input matInput type="text" formControlName="nome" placeholder="Ex. Farinha de trigo">
+              </mat-form-field>
+          </div>
 
-                <div class="conteudo-form">
-                    <div class="conteudo">
-                        <form class="example-form">
-                            <mat-form-field class="example-full-width" appearance="fill">
-                                <mat-label for="nome">Nome do ingrediente:</mat-label>
-                                <input matInput type="text" formControlName="nome" placeholder="Ex. Farinha de trigo">
-                            </mat-form-field>
-                        </form>
-                    </div>
-        
-                    <div class="conteudo">
-                        <form class="example-form">
-                            <mat-form-field class="example-full-width" appearance="fill">
-                                <mat-label for="quantidade">Quantidade:</mat-label>
-                                <input matInput type="text" formControlName="quantidade" placeholder="Ex. 100">
-                            </mat-form-field>
-                        </form>
-                    </div>
-        
-                    <div class="conteudo">
-                        <form class="example-form">
-                            <mat-form-field class="example-full-width" appearance="fill">
-                                <mat-label for="medida">Unidade de medida:</mat-label>
-                                <input matInput type="text" formControlName="medida" placeholder="Ex. gramas">
-                            </mat-form-field>
-                        </form>
-                    </div>
-        
-                    <button type="button" (click)="adicionarIngredientes()" mat-flat-button color="primary">Adicionar</button>
+          <div class="conteudo">
+              <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label for="quantidade">Quantidade:</mat-label>
+                <input matInput type="text" formControlName="quantidade" placeholder="Ex. 100">
+              </mat-form-field>
+          </div>
 
-                </div>
+          <div class="conteudo">
+              <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label for="medida">Unidade de medida:</mat-label>
+                <input matInput type="text" formControlName="medida" placeholder="Ex. gramas">
+              </mat-form-field>
+          </div>
 
-                <div *ngFor="let item of listaIngredientes">
-                    <div class="lista">
-                       <p>- {{item.amount + ' ' + item.unit + ' ' + item.name}}</p> 
-                    </div>
-                </div>
-            </div>
-            
-            <div class="descricao">
-                <div class="conteudo">
-                    <form class="example-form">
-                        <mat-form-field class="example-full-width" appearance="fill">
-                            <mat-label for="nomeReceita">Nome da Receita:</mat-label>
-                            <input matInput type="text" formControlName="nomeReceita" placeholder="Ex. Bolo de chocolate">
-                        </mat-form-field>
-                    </form>
-                </div>
-    
-                <div class="conteudo">
-                    <form class="example-form">
-                        <mat-form-field class="example-full-width" appearance="fill">
-                            <mat-label for="nomeUser">Seu nome:</mat-label>
-                            <input matInput type="text" formControlName="nomeUser" placeholder="Ex. Maria">
-                        </mat-form-field>
-                    </form>
-                    
-                </div>
-    
-                <div class="conteudo">
-                    <form class="example-form">
-                        <mat-form-field class="example-full-width" appearance="fill">
-                            <mat-label for="categoria">Categoria:</mat-label>
-                            <input matInput type="text" formControlName="categoria" placeholder="Ex. Bolo">
-                        </mat-form-field>
-                    </form>
-                </div>
-            </div>
-            
-            <div class="preparo">
-                <h2>Modo de preparo:</h2>
-                <form class="example-form">
-                    <mat-form-field class="example-full-width" appearance="fill" >
-                        <textarea name="preparo" formControlName="preparo" matInput placeholder="Ex. Coloque a farinha de trigo em um bowl"></textarea>
-                    </mat-form-field>
-                </form>
-            </div>
+          <button  class="botao-add" type="button" (click)="adicionarIngredientes()" mat-flat-button color="primary">Adicionar</button>
 
-            <div class="botao">
-                <button type="submit" mat-flat-button color="primary">Salvar</button>
-            </div>
-        </form>
+        </div>
+
+        <div *ngFor="let item of listaIngredientes">
+          <div class="lista">
+            <p>- {{item.amount + ' ' + item.unit + ' ' + item.name}}</p>
+          </div>
+        </div>
     </div>
+
+    <div class="descricao">
+      <div class="conteudo">
+          <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label for="nomeReceita">Nome da Receita:</mat-label>
+            <input matInput type="text" formControlName="nomeReceita" placeholder="Ex. Bolo de chocolate">
+          </mat-form-field>
+      </div>
+
+      <div class="conteudo">
+          <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label for="nomeUser">Seu nome:</mat-label>
+            <input matInput type="text" formControlName="nomeUser" placeholder="Ex. Maria">
+          </mat-form-field>
+      </div>
+
+      <div class="conteudo">
+          <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label for="categoria">Categoria:</mat-label>
+            <input matInput type="text" formControlName="categoria" placeholder="Ex. Bolo">
+          </mat-form-field>
+      </div>
+    </div>
+
+    <div class="preparo">
+      <h2>Modo de preparo:</h2>
+        <mat-form-field class="example-full-width" appearance="fill" >
+          <textarea name="preparo" formControlName="preparo" matInput placeholder="Ex. Coloque a farinha de trigo em um bowl"></textarea>
+        </mat-form-field>
+    </div>
+
+    <div class="botao">
+      <button type="submit" mat-flat-button color="primary">Salvar</button>
+    </div>
+</form>
 </div>

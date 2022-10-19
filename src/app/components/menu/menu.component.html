@@ -3,6 +3,7 @@
         <h1>Receita Compartilhada</h1>
         <div class="botoes">
             <a [routerLink]='["/"]' mat-button>Home</a>
+            <a *ngIf="taLogado()" [routerLink]='["/novo-usuario"]' mat-button>Cadastrar usuário</a>
             <a *ngIf="taLogado()" [routerLink]='["/nova-receita"]' mat-button>Adicionar receita</a>
             <a *ngIf="!taLogado()" [routerLink]='["/login"]' mat-button>Login</a>
             <a *ngIf="taLogado()" (click)="logout()" mat-button>Sair</a>
