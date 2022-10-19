@@ -56,7 +56,7 @@
   .novareceita h1 {
     font-size: 3.5rem;
   }
-  .example-full-width {
+  .example-full-width, .mat-form-field {
     width: 30rem;
   }
   .conteudo-ingredientes h2, .preparo h2 {
@@ -67,7 +67,7 @@
   .novareceita h1 {
     font-size: 4rem;
   }
-  .example-full-width {
+  .example-full-width, .mat-form-field {
     width: 32rem;
   }
   .conteudo-ingredientes h2, .preparo h2 {
@@ -78,7 +78,7 @@
   .novareceita h1 {
     font-size: 4rem;
   }
-  .example-full-width {
+  .example-full-width, .mat-form-field {
     width: 32rem;
   }
   .conteudo-ingredientes h2, .preparo h2 {
@@ -89,7 +89,7 @@
   .novareceita h1 {
     font-size: 4rem;
   }
-  .example-full-width {
+  .example-full-width, .mat-form-field {
     width: 32rem;
   }
   .conteudo-ingredientes h2, .preparo h2 {
